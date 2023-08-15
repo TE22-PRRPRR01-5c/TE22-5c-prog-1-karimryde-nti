@@ -1,0 +1,28 @@
+{
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.editorAssociations": {   
+        "*.md": "vscode.markdown.preview.editor",
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#3B1D61",
+        "titleBar.activeBackground": "#532888",
+        "titleBar.activeForeground": "#FBF9FD"
+    },
+    "editor.codeLens": false,
+    "explorer.compactFolders": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "files.autoSave": "afterDelay",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "csharp.suppressBuildAssetsNotification": true,
+    "git.postCommitCommand": "sync",
+    "csharp2plantuml.allInOne": true,
+    "csharp2plantuml.createAssociation": false,
+    "csharp2plantuml.public": false,
+    "plantuml.urlFormat": "png",
+    "plantuml.exportFormat": "png",
+    "plantuml.exportOutDir": ".",
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.server": "https://www.plantuml.com/plantuml",
+    "sessionlogger.enabled": false,
+}
