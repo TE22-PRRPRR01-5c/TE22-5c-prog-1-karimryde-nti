@@ -24,5 +24,6 @@
     "plantuml.exportOutDir": ".",
     "plantuml.render": "PlantUMLServer",
     "plantuml.server": "https://www.plantuml.com/plantuml",
-    "sessionlogger.enabled": false
+    "sessionlogger.enabled": false,
+    "dotnet.defaultSolution": "prog-1-karimryde-nti.sln"
 }
