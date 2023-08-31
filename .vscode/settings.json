@@ -1,8 +1,5 @@
 {
     "workbench.iconTheme": "vscode-great-icons",
-    "workbench.editorAssociations": {   
-        "*.md": "vscode.markdown.preview.editor",
-    },
     "workbench.colorCustomizations": {
         "activityBar.background": "#3B1D61",
         "titleBar.activeBackground": "#532888",
@@ -25,31 +22,5 @@
     "plantuml.render": "PlantUMLServer",
     "plantuml.server": "https://www.plantuml.com/plantuml",
     "sessionlogger.enabled": false,
-    "dotnet.defaultSolution": "prog-1-karimryde-nti.sln",
-    "editor.tokenColorCustomizations": {
-        "[Sublime Monokai]": {
-            "comments": "#b9b9b9",
-            "keywords": "#ff4b4b",
-            "textMateRules": [
-                {
-                    "scope": "entity.name.tag",
-                    "settings": {
-                        "foreground": "#ff4b4b"
-                    }
-                }
-            ]
-        },
-        "[Visual Studio Light]": {
-            "textMateRules": [
-                {
-                    "scope": "variable.parameter",
-                    "settings": {
-                        "foreground": "#1a93e4"
-                    }
-                }
-            ]
-        },
-        "comments": "",
-        "textMateRules": []
-    }
+    "git.openRepositoryInParentFolders": "always"
 }
