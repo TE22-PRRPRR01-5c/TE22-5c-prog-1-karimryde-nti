@@ -11,13 +11,11 @@ Console.WriteLine("Hej, vad heter du? ");
 string namn = Console.ReadLine();
 
 Console.WriteLine("Hej! " + namn + ", trevligt att se dig.");
-
 Console.ReadLine();
 
 Console.WriteLine("Hur gammal är du? ");
 string ålder = Console.ReadLine();
 
 Console.WriteLine("Du är " + ålder + " år gammal.");
-
 Console.ReadLine();
 
