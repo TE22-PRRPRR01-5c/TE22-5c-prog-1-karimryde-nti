@@ -1,35 +1,42 @@
-﻿// Program som skan avgöra om användaren är kvalificerad
+﻿// Program som för hälsovanor
+
 Console.Clear();
-Console.Write("Ange ditt namn: ");
+
+// Frågar efter namn
+Console.Write("Hej! Ange ditt namn: ");
 string namn = Console.ReadLine();
 
-// En variabel för att hålla reda på om anv. är kvalificerad
-bool ärKvalificerad = true;
-
-Console.WriteLine($"Hej {namn}, nu kommer några frågor för att se om du ärkvalificerad");
-
-// Första frågan
-Console.Write("Är du över 18 år (j/n): ");
+// Tandborstning j/n
+Console.Write("Har du borstat tänderna idag (j/n)? ");
 string svar = Console.ReadLine();
-if (svar != "j")
+
+// Variabel för att räkna antal ja-svar
+int jaRäknare = 0;
+
+// Kontroll
+if (svar == "j")
 {
-    ärKvalificerad = false;
+    jaRäknare += 1;
 }
 
-// Andra frågan
-Console.Write("Har du körkort (j/n): ");
+// Frukost j/n
+Console.Write("Har du ätit frukost idag (j/n)? ");
 svar = Console.ReadLine();
-if (svar != "j")
+
+// Kontroll
+if (svar == "j")
 {
-    ärKvalificerad = false;
+    jaRäknare += 1;
+}
+// Motion j/n
+Console.Write("Har du ätit motionerat idag (j/n)? ");
+svar = Console.ReadLine();
+
+// Kontroll
+if (svar == "j")
+{
+    jaRäknare += 1;
 }
 
-// Ge feedback till användaren
-if (ärKvalificerad)
-{
-    Console.WriteLine($"Grattis {namn}! Du uppfyller villkoren.");
-}
-else
-{
-    Console.WriteLine($"Tyvärr {namn}! Du uppfyller inte villkoren.");
-}
+// Resultat av frågorna
+Console.WriteLine($"{namn}, du svarade ja {jaRäknare} gånger.");
