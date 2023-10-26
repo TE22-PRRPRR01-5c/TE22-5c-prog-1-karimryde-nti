@@ -1,6 +1,6 @@
 ﻿// Register på namn uatn dubletter
 Console.Clear();
-Console.WriteLine("Register på namn uatn dubletter");
+Console.WriteLine("Register på namn utan dubletter");
 
 // Be användaren mata in antalet personer
 Console.Write("Hur många namn vill du registrera? ");
@@ -29,7 +29,7 @@ while (i < antalNamn)
     // Har vi inte hittat namnet så lägger vi till namnet
     if (!hittad)
     {
-        namnlista[i] = Console.ReadLine();
+        namnlista[i] = input;
     }
     i++;
 }
