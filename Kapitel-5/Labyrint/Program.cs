@@ -9,8 +9,8 @@ if (Console.ReadLine().ToLower() != "j")
 }
 
 // Slå på UTF8 för att visa Emojis korrekt
-Console.InputEncoding = System.Text.Encoding.UTF8;
-Console.OutputEncoding = System.Text.Encoding.UTF8;
+Console.InputEncoding = System.Text.Encoding.Unicode;
+Console.OutputEncoding = System.Text.Encoding.Unicode;
 Console.CursorVisible = false;
 
 // Skapa en spelplan
