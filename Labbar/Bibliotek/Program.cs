@@ -3,15 +3,19 @@ Console.Clear();
 Console.WriteLine("Välkommen till bokregister");
 Console.WriteLine("Här kan du registrera dina böcker");
 
+/* ****************************************** */
+/* ********* H U V U D D E L  *************** */
+/* ****************************************** */
+
 // En list för att lagra boknamn
 List<string> boklista = new List<string>();
+string filnamn = "bibliotek.txt";
 
 // Programloop
 while (true)
 {
     // Meny med val
-    Console.WriteLine(
-@"
+    Console.WriteLine(@"
     1. Lägg till en bok
     2. Visa alla böcker
     3. Sök efter en bok
@@ -42,8 +46,18 @@ while (true)
             RaderaBok(boklista);
             break;
 
-        // Avsluta
+        // Spara ned boklista i textfil
         case "5":
+            SparaIFil(boklista, filnamn);
+            break;
+
+        // Läsa in boklista från textfil
+        case "6":
+            boklista = LäsaFil(filnamn);
+            break;
+
+        // Avsluta
+        case "7":
             Console.WriteLine("Tack för idag!");
             return;
 
@@ -72,12 +86,69 @@ static void VisaAllaBöcker(List<string> lista)
     }
 }
 
+/// <summary>
+/// Lista alla böcker som matchar en sökterm
+/// </summary>
+/// <param name="lista"></param>
 static void SökBok(List<string> lista)
 {
+    // Läser in sökterm
+    Console.Write("Ange en sökterm: ");
+    string sökterm = Console.ReadLine();
 
+    // Gå igenom listan & skriv alla böcker som matchar
+    foreach (var bok in lista)
+    {
+        // Finns sökterm i boken
+        if (bok.Contains(sökterm))
+        {
+            Console.WriteLine($"Hittade: {bok}");
+        }
+    }
 }
 
+/// <summary>
+/// Sök bok för att kunna radera den
+/// </summary>
+/// <param name="lista"></param>
 static void RaderaBok(List<string> lista)
 {
+    // Läser in sökterm
+    Console.Write("Ange en sökterm: ");
+    string sökterm = Console.ReadLine();
 
+    // Gå igenom listan & skriv alla böcker som matchar
+    List<string> listaRadera = new List<string>();
+    foreach (var bok in lista)
+    {
+        // Finns sökterm i boken
+        if (bok.Contains(sökterm))
+        {
+            Console.WriteLine($"Hittade: {bok}");
+
+            Console.Write($"Vill du raderna '{bok}' (j/n)?  ");
+            string svar = Console.ReadLine();
+            if (svar == "j")
+            {
+                listaRadera.Add(bok);
+            }
+        }
+    }
+
+    // Gå igenom lista på böcker att radera
+    foreach (var bok in listaRadera)
+    {
+        lista.Remove(bok);
+    }
 }
+
+static void SparaIFil(List<string> lista, string filnamn)
+{
+    File.WriteAllLines(filnamn, lista);
+}
+
+static List<string> LäsaFil(string filnamn)
+{
+    return File.ReadAllLines(filnamn).ToList();
+}
+
