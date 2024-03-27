@@ -20,4 +20,4 @@ foreach (var rad in rader)
     }
 }
 
-Console.ReadLine();
+Console.WriteLine($"Antal citat: {citatLista.Count}");
